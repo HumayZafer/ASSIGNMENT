@@ -1,0 +1,32 @@
+DECLARE Str : String
+        DECLARE checker : String
+        DECLARE Character1, Character2 : Character
+        DECLARE all : Boolean
+        DECLARE i, x : Integer
+        checker = "abcdefghijklmnopqrstuvwxyz"
+        all = True
+        Str = ""
+        Character1 = ""
+        i = 0
+        x = 0
+        Character2 = ""
+        OUTPUT("Enter a String: ")
+        Str = Input()
+        For i = 1 To Len(checker)
+            Character1 = Mid(checker, i, 1)
+            Character1 = LCase(Character1)
+            For x = 1 To Len(Str)
+                Character2 = LC : e(Character2)
+                Character2 = Mid(Str, x, 1)
+                If Character1 = Character2 Then
+                    all = True
+                Else
+                    all = False
+                End If
+            Next
+        Next
+        If all = True Then
+            OUTPUT("This String have all the alphabets")
+        Else
+            OUTPUT("This String does not have all the alphabets")
+        End

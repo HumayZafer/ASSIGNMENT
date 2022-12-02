@@ -1,0 +1,39 @@
+Module Module1
+
+    Sub Main()
+        Dim Str As String
+        Dim checker As String
+        Dim char1, char2 As Char
+        Dim all As Boolean
+        Dim i, x As Integer
+        checker = "abcdefghijklmnopqrstuvwxyz"
+        all = True
+        Str = ""
+        char1 = ""
+        i = 0
+        x = 0
+        char2 = ""
+        Console.Write("Enter a String: ")
+        Str = Console.ReadLine
+        For i = 1 To Len(checker)
+            char1 = Mid(checker, i, 1)
+            char1 = LCase(char1)
+            For x = 1 To Len(Str)
+                char2 = LCase(char2)
+                char2 = Mid(Str, x, 1)
+                If char1 = char2 Then
+                    all = True
+                Else 
+                    all = False
+                End If
+            Next
+        Next
+        If all = True Then
+            Console.WriteLine("This String have all the alphabets")
+        Else
+            Console.WriteLine("This String does not have all the alphabets")
+        End If
+        Console.ReadKey()
+
+    End Sub
+End Module

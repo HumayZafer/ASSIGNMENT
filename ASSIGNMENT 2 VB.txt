@@ -1,0 +1,37 @@
+Module Module1
+
+    Sub Main()
+        Dim str1, str2 As String
+        Dim char1, char2, char3 As Char
+        Dim c As Integer
+
+
+        str1 = ""
+        str2 = ""
+        c = 0
+        char1 = ""
+        char2 = ""
+        char3 = ""
+
+        Console.Write("Enter your string: ")
+        str1 = Console.ReadLine
+        Console.Write("Enter character to replace: ")
+        char1 = Console.ReadLine
+        Console.Write("Enter character to replace with: ")
+        char2 = Console.ReadLine
+        For c = 1 To Len(str1)
+            char3 = Mid(str1, c, 1)
+            If char1 = char3 Then
+                str2 = str2 & char2
+            Else
+                str2 = str2 & char3
+                End
+        Next
+
+        Console.WriteLine("New string is: " & str2)
+
+        Console.ReadKey()
+
+    End Sub
+
+End Module

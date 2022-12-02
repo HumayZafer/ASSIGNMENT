@@ -1,0 +1,28 @@
+DECLARE str1, str2 : String
+        DECLARE Character1, Character2, Character3 : Character
+        DECLARE c : Integer
+
+
+        str1 = ""
+        str2 = ""
+        c = 0
+        Character1 = ""
+        Character2 = ""
+        Character3 = ""
+
+        OUTPUT("Enter your string: ")
+        str1 = INPUT
+        OUTPUT("Enter Characteracter to replace: ")
+        Character1 = INPUT
+        OUTPUT("Enter Characteracter to replace with: ")
+        Character2 = INPUT
+        For c = 1 To Len(str1)
+            Character3 = Mid(str1, c, 1)
+            If Character1 = Character3 Then
+                str2 = str2 & Character2
+            Else
+                str2 = str2 & Character3
+                End
+        Next
+
+        OUTPUT("New string is: " & str2)

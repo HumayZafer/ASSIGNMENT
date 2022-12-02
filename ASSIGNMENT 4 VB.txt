@@ -1,0 +1,48 @@
+Module Module1
+
+    Sub Main()
+        Dim str1, str2 As String
+        Dim charA, selchar, fchar As Char
+        Dim charcount, maxcount, C, B As Integer
+
+        str1 = " "
+        str2 = " "
+        charA = " "
+        selchar = " "
+        fchar = " "
+        C = 0
+        B = 0
+        charcount = 0
+        maxcount = -1
+
+
+        Console.Write("Please enter your string: ")
+        str1 = Console.ReadLine()
+
+        For C = 1 To Len(str1)
+            charA = Mid(str1, C, 1)
+            charcount = 0
+            For D = 1 To Len(str1)
+
+                selchar = Mid(str1, D, 1)
+                If charA = selchar Then
+                    charcount = charcount + 1
+                End If
+            Next D
+            If charcount > maxcount Then
+                maxcount = charcount
+                fchar = charA
+
+
+            End If
+
+        Next C
+
+        Console.WriteLine("The most repeated character in your string is: " & fchar)
+        Console.ReadKey()
+
+
+
+    End Sub
+
+End Module

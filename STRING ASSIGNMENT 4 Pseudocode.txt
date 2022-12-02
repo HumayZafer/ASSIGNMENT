@@ -1,0 +1,38 @@
+DECLARE str1, str2 : String
+        DECLARE CharacterA, selCharacter, fCharacter : Character
+        DECLARE Charactercount, maxcount, C, B : Integer
+
+        str1 = " "
+        str2 = " "
+        CharacterA = " "
+        selCharacter = " "
+        fCharacter = " "
+        C = 0
+        B = 0
+        Charactercount = 0
+        maxcount = -1
+
+
+        OUTPUT("Please enter your string: ")
+        str1 = INPUT()
+
+        For C = 1 To Len(str1)
+            CharacterA = Mid(str1, C, 1)
+            Charactercount = 0
+            For D = 1 To Len(str1)
+
+                selCharacter = Mid(str1, D, 1)
+                If CharacterA = selCharacter Then
+                    Charactercount = Charactercount + 1
+                    End
+            Next D
+            If Charactercount > maxcount Then
+                maxcount = Charactercount
+                fCharacter = CharacterA
+
+
+                End
+
+        Next C
+
+        OUTPUT("The most repeated Characteracter in your string is: " & fCharacter)
